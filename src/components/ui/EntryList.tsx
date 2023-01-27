@@ -24,6 +24,7 @@ export const EntryList: FC<PropsWithChildren<Props>> = ({ status }) => {
 
         const entry = entries.find(e => e._id === id)!
         entry.status = status
+        entry.color = status === 'pending' ? "#8b2d01a4" : status === 'in-progress' ? '#2300fb59' : '#00800075'
         updateEntry(entry)
         endDragging()
     }
@@ -49,7 +50,7 @@ export const EntryList: FC<PropsWithChildren<Props>> = ({ status }) => {
                 <List sx={{ opacity: isDragging ? 0.3 : 1, transition: 'all .3s' }}>
                     {
                         entriesByStatus.map(entry => (
-                            <EntryCard key={entry._id} entry={entry} color={entry.color} />
+                            <EntryCard key={entry._id} entry={entry} />
                         ))
                     }
                 </List>

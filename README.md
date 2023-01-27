@@ -52,3 +52,15 @@ MongoDB URl local:
 ```
 mongodb://localhost:27017/entriesdb
 ```
+
+## Configurar las variables de entorno
+
+Renombrar el archivo **.env.template** a **.env**
+
+## Llenar la DDBB con información de pruebas
+
+LLamar a:
+
+```
+http://localhost:3000//api/seed
+```
