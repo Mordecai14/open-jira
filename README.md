@@ -57,6 +57,19 @@ mongodb://localhost:27017/entriesdb
 
 Renombrar el archivo **.env.template** a **.env**
 
+- MongoDB URL Local:
+
+```
+MONGO_URL=mongodb://localhost:27017/entriesdb
+```
+
+- Reconstruir los módulos de node y levantar Next
+
+```
+yarn install
+yarn dev
+```
+
 ## Llenar la DDBB con información de pruebas
 
 LLamar a:

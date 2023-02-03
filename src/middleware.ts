@@ -13,7 +13,8 @@ export function middleware(req: NextRequest) {
       const url = req.nextUrl.clone();
       url.pathname = '/api/bad-request'
       url.search = `?message=${id} is not a MongoID`
-      return NextResponse.rewrite(url)
+
+      return NextResponse.rewrite(url);
     }
   }
 
