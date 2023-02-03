@@ -6,10 +6,10 @@ import { UIContext } from '@/context/ui';
 
 interface Props {
     entry: Entry;
-    color: string;
 }
 
-export const EntryCard: FC<PropsWithChildren<Props>> = ({ entry, color }) => {
+export const EntryCard: FC<PropsWithChildren<Props>> = ({ entry }) => {
+    console.log(entry.color)
 
     const { startDragging, endDragging } = useContext(UIContext)
 
@@ -25,7 +25,11 @@ export const EntryCard: FC<PropsWithChildren<Props>> = ({ entry, color }) => {
 
     return (
         <Card
-            sx={{ marginBottom: 1, backgroundColor: color, position: "relative", zIndex: 999 }}
+            sx={{
+                marginBottom: 1,
+                // backgroundColor: entry.color,
+                position: "relative", zIndex: 999
+            }}
             //eventos drag
             draggable
             onDragStart={onDragStart}
