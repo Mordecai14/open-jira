@@ -25,7 +25,11 @@ export const EntryCard: FC<PropsWithChildren<Props>> = ({ entry }) => {
 
     return (
         <Card
-            sx={{ marginBottom: 1, backgroundColor: entry.color, position: "relative", zIndex: 999 }}
+            sx={{
+                marginBottom: 1,
+                // backgroundColor: entry.color,
+                position: "relative", zIndex: 999
+            }}
             //eventos drag
             draggable
             onDragStart={onDragStart}
